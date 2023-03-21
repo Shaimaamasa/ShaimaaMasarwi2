@@ -13,4 +13,6 @@
     <string name="help">Help</string>
     <string name="logout">login</string>
     <string name="register">register</string>
+    <string name="channel_name">channelname</string>
+    <string name="channel_description">welcome !</string>
 </resources>

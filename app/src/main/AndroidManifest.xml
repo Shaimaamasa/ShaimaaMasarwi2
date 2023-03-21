@@ -3,6 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.shaimaamasarwi">
 
+    <uses-permission android:name="android.permission.R" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,6 +16,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ShaimaaMasarwi"
         tools:targetApi="31">
+        <activity
+            android:name=".item_sets"
+            android:exported="false" />
+        <activity
+            android:name=".splash"
+            android:exported="false" />
+
+        <meta-data android:name="com.google.android.actions" />
+
         <activity
             android:name=".mailActivity2"
             android:exported="false" />
@@ -43,6 +55,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <receiver
+            android:name=".Receiver"
+            android:enabled="true"
+            android:exported="false" />
+
+        <service
+            android:name=".MyIntentService"
+            android:enabled="true"
+            android:exported="false" />
     </application>
 
 </manifest>

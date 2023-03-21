@@ -47,7 +47,7 @@ public class RegisterActivity extends AppCompatActivity {
 
             editor.apply();
             Toast.makeText(this, "User registered", Toast.LENGTH_LONG).show();
-            Intent intent_main =new Intent(this, MainActivity.class);
+            Intent intent_main =new Intent(this, MainActivity2home.class);
             startActivity(intent_main);//
         }
         else{

@@ -10,14 +10,25 @@
         <entry key="..\:/Users/win 10 pro/AndroidStudioProjects/ShaimaaMasarwi/app/src/main/res/drawable/wallpaper1.xml" value="0.1365" />
         <entry key="..\:/Users/win 10 pro/AndroidStudioProjects/ShaimaaMasarwi/app/src/main/res/layout/activity_about.xml" value="0.23854166666666668" />
         <entry key="..\:/Users/win 10 pro/AndroidStudioProjects/ShaimaaMasarwi/app/src/main/res/layout/activity_camera.xml" value="0.23854166666666668" />
+        <entry key="..\:/Users/win 10 pro/AndroidStudioProjects/ShaimaaMasarwi/app/src/main/res/layout/activity_custom_gallery.xml" value="0.11302083333333333" />
+        <entry key="..\:/Users/win 10 pro/AndroidStudioProjects/ShaimaaMasarwi/app/src/main/res/layout/activity_gallery.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/win 10 pro/AndroidStudioProjects/ShaimaaMasarwi/app/src/main/res/layout/activity_gallerycam.xml" value="0.16304347826086957" />
         <entry key="..\:/Users/win 10 pro/AndroidStudioProjects/ShaimaaMasarwi/app/src/main/res/layout/activity_help.xml" value="0.23854166666666668" />
+        <entry key="..\:/Users/win 10 pro/AndroidStudioProjects/ShaimaaMasarwi/app/src/main/res/layout/activity_item_sets.xml" value="0.1" />
         <entry key="..\:/Users/win 10 pro/AndroidStudioProjects/ShaimaaMasarwi/app/src/main/res/layout/activity_list.xml" value="0.23854166666666668" />
         <entry key="..\:/Users/win 10 pro/AndroidStudioProjects/ShaimaaMasarwi/app/src/main/res/layout/activity_mail.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/win 10 pro/AndroidStudioProjects/ShaimaaMasarwi/app/src/main/res/layout/activity_mail2.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/win 10 pro/AndroidStudioProjects/ShaimaaMasarwi/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/win 10 pro/AndroidStudioProjects/ShaimaaMasarwi/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/win 10 pro/AndroidStudioProjects/ShaimaaMasarwi/app/src/main/res/layout/activity_main2.xml" value="0.221875" />
         <entry key="..\:/Users/win 10 pro/AndroidStudioProjects/ShaimaaMasarwi/app/src/main/res/layout/activity_main_activity2home.xml" value="0.2" />
+        <entry key="..\:/Users/win 10 pro/AndroidStudioProjects/ShaimaaMasarwi/app/src/main/res/layout/activity_notification.xml" value="0.23802083333333332" />
         <entry key="..\:/Users/win 10 pro/AndroidStudioProjects/ShaimaaMasarwi/app/src/main/res/layout/activity_register.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/win 10 pro/AndroidStudioProjects/ShaimaaMasarwi/app/src/main/res/layout/activity_splash.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/win 10 pro/AndroidStudioProjects/ShaimaaMasarwi/app/src/main/res/layout/gallery.xml" value="0.24010416666666667" />
+        <entry key="..\:/Users/win 10 pro/AndroidStudioProjects/ShaimaaMasarwi/app/src/main/res/layout/galleryitem.xml" value="0.24010416666666667" />
+        <entry key="..\:/Users/win 10 pro/AndroidStudioProjects/ShaimaaMasarwi/app/src/main/res/layout/galleryitemcam.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/win 10 pro/AndroidStudioProjects/ShaimaaMasarwi/app/src/main/res/menu/menu.xml" value="0.16911764705882354" />
+        <entry key="..\:/Users/win 10 pro/AndroidStudioProjects/ShaimaaMasarwi/app/src/main/res/xml/gallery.xml" value="0.176953125" />
       </map>
     </option>
   </component>
