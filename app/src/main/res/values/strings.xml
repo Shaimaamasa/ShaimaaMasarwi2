@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ShaimaaMasarwi</string>
+    <string name="app_name">Book App</string>
     <string name="Shaimaa_Masarwi">Shaimaa Masarwi</string>
     <string name="edittexttextemailaddress">editTextTextEmailAddress</string>
     <string name="edittexttextpassword">editTextTextPassword</string>
@@ -15,4 +15,9 @@
     <string name="register">register</string>
     <string name="channel_name">channelname</string>
     <string name="channel_description">welcome !</string>
+    <string name="kids">Kids</string>
+    <string name="ficition">ficition</string>
+    <string name="health">Health</string>
+    <string name="history_past">history (past)</string>
+    <string name="fiction">fiction</string>
 </resources>

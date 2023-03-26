@@ -25,7 +25,7 @@ public class RegisterActivity extends AppCompatActivity {
         etName = findViewById(R.id.editTextTextPersonName2);
         etMail = findViewById(R.id.editTextTextEmailAddress2);
         etPassword = findViewById(R.id.editTextTextPassword2);
-        btCancel = findViewById(R.id.button6);
+        btCancel = findViewById(R.id.btnRegister);
         btCancel = findViewById(R.id.button7);
         preferences = getSharedPreferences("Userinfo", 0);
     }

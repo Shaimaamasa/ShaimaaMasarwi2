@@ -2,33 +2,78 @@ package com.example.shaimaamasarwi;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
-import android.app.AlarmManager;
-import android.app.PendingIntent;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
-public class MainActivity2home {
 
-}
-class Notification extends AppCompatActivity {
-
+public class MainActivity2home extends AppCompatActivity {
+private Button button4, button3, button9, button8;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_notification);
-        Intent notification = new Intent(this, Receiver.class);
-        PendingIntent pendingIntent = PendingIntent.getBroadcast
-                (this, 1, notification, PendingIntent.FLAG_UPDATE_CURRENT);
+        setContentView(R.layout.activity_main_activity2home);
+button4 = findViewById(R.id.button4);
+button3 = findViewById(R.id.button3);
+button8 = findViewById(R.id.button8);
+button9 = findViewById(R.id.button9);
 
-        AlarmManager alarmManager = (AlarmManager) this.getSystemService(Context.ALARM_SERVICE);
-        alarmManager.setRepeating(AlarmManager.RTC, System.currentTimeMillis(), 3000, pendingIntent);
+button4.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        openActivity4();
+    }
+
+});
+
+button9.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        openActivity9();
+    }
+});
+
+button3.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        openActivity3();
+    }
+});
+
+button8.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        openActivity8();
+    }
+});
 
     }
 
+
+
+public void openActivity8(){
+    Intent intent = new Intent(this,health.class);
+    startActivity(intent);
+}
+
+
+
+
+
+    public void openActivity3(){
+            Intent intent = new Intent(this, kids.class);
+
+        startActivity(intent);
+    }
+
+
+   public void openActivity9(){
+       Intent intent = new Intent(this,history.class);
+       startActivity(intent);
+   }
+
+    public void openActivity4(){
+        Intent intent = new Intent(this,fiction.class);
+        startActivity(intent);
+    }
 }
