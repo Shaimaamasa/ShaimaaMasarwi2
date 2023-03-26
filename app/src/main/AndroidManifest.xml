@@ -34,9 +34,6 @@
         <activity
             android:name=".item_sets"
             android:exported="false" />
-        <activity
-            android:name=".splash"
-            android:exported="false" />
 
         <meta-data android:name="com.google.android.actions" />
 

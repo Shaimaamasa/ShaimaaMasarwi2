@@ -11,4 +11,7 @@
     <color name="gray">#e9edc9</color>
     <color name="white">#F9F6EE</color>
     <color name="red">#C70039</color>
+    <color name="orange">#cd7700</color>
+    <color name="page">#fffacd</color>
+    <color name="brown">#4d3227</color>
 </resources>

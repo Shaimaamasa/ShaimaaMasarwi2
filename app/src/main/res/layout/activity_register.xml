@@ -5,25 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".RegisterActivity"
-    android:background="@drawable/background">
-
-    <EditText
-
-        android:id="@+id/editTextTextPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:minHeight="48dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.547"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress2"
-        app:layout_constraintVertical_bias="0.161"
-        android:textColor="@color/white"
-        android:text="Password"
-        />
+    android:background="@drawable/wallpaper2">
 
     <Button
         android:id="@+id/btnRegister"
@@ -32,7 +14,10 @@
         android:layout_height="wrap_content"
         android:backgroundTintMode="add"
         android:onClick="register"
+        android:textColor="@color/orange"
+        android:textSize="20dp"
         android:text="Register"
+        android:background="@drawable/btn_bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.259"
@@ -41,11 +26,14 @@
         app:layout_constraintVertical_bias="0.692" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/btCancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="cancel"
         android:text="Cancel"
+        android:background="@drawable/btn_bg"
+        android:textColor="@color/orange"
+        android:textSize="20dp"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -62,7 +50,7 @@
         android:ems="10"
         android:hint="Email"
         android:text="Email"
-        android:textColor="@color/white"
+        android:textColor="@color/brown"
         android:inputType="textEmailAddress"
         android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -78,7 +66,8 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Name"
-        android:textColor="@color/white"
+        android:textColor="@color/brown"
+        android:textSize=""
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -89,23 +78,19 @@
         android:text="Name"
         />
 
-    <TextView
-        android:id="@+id/textView3"
+    <EditText
+        android:id="@+id/editTextTextPassword2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Book App"
-        android:fontFamily="sans-serif-condensed-light"
-        android:textColor="#C70039"
-        android:textSize="60dp"
+        android:ems="10"
+        android:hint="password"
+        android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.453"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.097"
-        tools:ignore="MissingConstraints"
-
-        />
+        app:layout_constraintVertical_bias="0.543" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

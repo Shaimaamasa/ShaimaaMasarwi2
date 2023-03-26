@@ -1,7 +1,5 @@
 package com.example.shaimaamasarwi;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -11,11 +9,16 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class RegisterActivity extends AppCompatActivity {
     private EditText etMail, etPassword, etName;
-    private Button btnRegister, btCancel;
+    private Button btnRegister, btCancel ;
     private TextView tvWelcome;
     SharedPreferences preferences;
+
+    public RegisterActivity() {
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +29,7 @@ public class RegisterActivity extends AppCompatActivity {
         etMail = findViewById(R.id.editTextTextEmailAddress2);
         etPassword = findViewById(R.id.editTextTextPassword2);
         btCancel = findViewById(R.id.btnRegister);
-        btCancel = findViewById(R.id.button7);
+        btCancel = findViewById(R.id.btCancel);
         preferences = getSharedPreferences("Userinfo", 0);
     }
 

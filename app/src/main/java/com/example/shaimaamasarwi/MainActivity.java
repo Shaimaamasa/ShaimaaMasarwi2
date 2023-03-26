@@ -1,9 +1,6 @@
 package com.example.shaimaamasarwi;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -15,6 +12,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+
 public class MainActivity extends AppCompatActivity {
     Button button,button2 ;
     EditText TextEmailAddress,TextPersonName,TextPassword;
@@ -23,12 +24,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
+        setContentView(R.layout.activitymain2);
         TextEmailAddress = findViewById(R.id.editTextTextEmailAddress);
         TextPassword = findViewById(R.id.editTextTextPassword);
         TextPersonName = findViewById(R.id.editTextTextPersonName);
         preferences = getSharedPreferences("Userinfo", 0);
+        button = findViewById(R.id.button);
+        button2 = findViewById(R.id.button2);
         //create a prefrenses file
         // mode 0 = read and write is only for my application
 
@@ -70,12 +72,13 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.help_menu :
                 Toast.makeText(MainActivity.this, "help clicked", Toast.LENGTH_SHORT).show();
-                Intent c = new Intent (this, listActivity.class);
+                Intent c = new Intent (this, help.class);
                 startActivity(c); // go to another page
                 break;
             case R.id.settings_menu :
@@ -99,15 +102,15 @@ public class MainActivity extends AppCompatActivity {
     public void onBackPressed() {
         AlertDialog.Builder dialog = new AlertDialog.Builder(this);
         dialog.setTitle("Alert");
-        dialog.setMessage("Are you sure you want to exit :) ?") ;
-        dialog.setNegativeButton("Nope",null);
-        dialog.setPositiveButton("yep", new DialogInterface.OnClickListener() {
+        dialog.setMessage("Are you sure you want to exit ?") ;
+        dialog.setNegativeButton("No",null);
+        dialog.setPositiveButton("yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 MainActivity.this.finish();
             }
         });
-        dialog.setIcon(R.drawable.ic_baseline_pets_24);
+        dialog.setIcon(R.drawable.bookicon);
         AlertDialog alertDialog= dialog.create();
         alertDialog.show();   }
 
