@@ -3,12 +3,13 @@ package com.example.shaimaamasarwi;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import java.io.File;
 import java.util.ArrayList;
 
-public class CustomGalleryActivity {
+public class CustomGalleryActivity extends AppCompatActivity {
     ArrayList<String> f = new ArrayList<>();
     File[] listFile;
     private String folderName = "myPhotoDir";
@@ -17,21 +18,22 @@ public class CustomGalleryActivity {
     //creating object of viewPagerAdapter
     ViewPagerAdapter mViewPagerAdapter;
 
-    
-
+    @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gallery);
         getFromSdcard();
         //initializing the viewpager object
-        mViewPager = mViewPager.findViewById();
+        mViewPager = findViewById(R.id.viewPaperMain);
         //initializing the Viewpageradapter
         mViewPagerAdapter = new ViewPagerAdapter(this, f);
         //adding the adapter to the viewPager
         mViewPager.setAdapter(mViewPagerAdapter);
     }
 
-    private void setContentView(int activity_gallery) {
+
+
+    public void setContentView(int activity_gallery) {
     }
 
     public void getFromSdcard(){
@@ -44,7 +46,7 @@ public class CustomGalleryActivity {
         }
     }
 
-    private String getExternalFilesDir(String folderName) {
+    public File getExternalFilesDir(String folderName) {
         return null;
     }
 }

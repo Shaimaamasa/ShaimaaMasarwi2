@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -16,15 +17,23 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+
 public class MainActivity extends AppCompatActivity {
     Button button,button2 ;
     EditText TextEmailAddress,TextPersonName,TextPassword;
     SharedPreferences preferences;
     // muta5erat m3 no3hen
-    @Override
+    private FirebaseAuth mAuth; // atha bzbtsh alt+enter
+
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activitymain2);
+        setContentView(R.layout.activitymain2); ////
+        mAuth = FirebaseAuth.getInstance();//connect to the firebase of the project
         TextEmailAddress = findViewById(R.id.editTextTextEmailAddress);
         TextPassword = findViewById(R.id.editTextTextPassword);
         TextPersonName = findViewById(R.id.editTextTextPersonName);
@@ -35,6 +44,33 @@ public class MainActivity extends AppCompatActivity {
         // mode 0 = read and write is only for my application
 
     }
+
+    //implement sign in method with login of behaviour
+    public void signIn(String email, String password){
+        mAuth.signInWithEmailAndPassword(email, password) //// alt enter if not working
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            // Sign in success, update UI with the signed-in user's information
+                            // you can do intent and move to next page
+                            Log.w("FIREBASE", "createUserWithEmail:success");
+
+                            Intent i_mail = new Intent(MainActivity.this, MainActivity2home.class);
+                            startActivity(i_mail);
+                        } else {
+
+                            // If sign in fails, display a message to the user.
+                            Toast.makeText(MainActivity.this, "Authentication failed.",
+                                    Toast.LENGTH_SHORT).show();
+                            Log.w("FIREBASE", "createUserWithEmail:failure", task.getException());
+                        }
+
+                        // ...
+                    }
+                });
+    }
+
 
 
     public void login(View view) {
@@ -47,22 +83,14 @@ public class MainActivity extends AppCompatActivity {
         else {
             String input_mail = TextEmailAddress.getText().toString();
             String input_password = TextPassword.getText().toString();
-            String input_name = TextPersonName.getText().toString();
+            String input_name = TextPersonName.getText().toString(); // alparamter al 1 mnoktho mn hon b3d hg get
 
 // this line gets the registered email and password in case no user was registered empty string is returned
             String registeredMail= preferences.getString("Email", "");
             String registeredPassword= preferences.getString("password", "");
             String registeredName = preferences.getString("Name", "");
+signIn(input_mail, input_password);
 
-            if(input_mail.equals(registeredMail) && (input_password.equals(registeredPassword)))
-            { if(input_name.equals(registeredName)){
-                Intent i_mail = new Intent(this, MainActivity2home.class);
-                startActivity(i_mail);
-            }}
-            else
-            {
-                Toast.makeText(this, "Incorrect credentials", Toast.LENGTH_SHORT).show();
-            }
         }
     }
 
