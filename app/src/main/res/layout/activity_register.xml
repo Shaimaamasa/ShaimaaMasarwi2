@@ -51,6 +51,7 @@
         android:hint="Email"
         android:text="Email"
         android:textColor="@color/brown"
+        android:onClick="register"
         android:inputType="textEmailAddress"
         android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
